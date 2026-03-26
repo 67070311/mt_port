@@ -172,8 +172,35 @@
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
+/* 📱 MOBILE */
+@media (max-width: 768px) {
 
-/* SECTION */
+  .cards-section {
+    padding: 80px 20px;
+  }
+
+  /* ซ่อนรูปซ้าย (กันรกจอ) */
+  .side-img {
+    display: none;
+  }
+
+  /* เรียงการ์ดลง */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* ปรับขนาด card */
+  .card {
+    width: 90%;
+    max-width: 320px;
+    height: auto;        /* 🔥 สำคัญ */
+    aspect-ratio: 9/16;  /* รักษาสัดส่วน */
+  }
+}
+
+/*---------- SECTION------------ */
 .about {
   position: relative;
   width: 100%;
@@ -220,23 +247,33 @@
   color: #252525;
 }
 
-/* highlight */
-.highlight {
-  color: #e53935;
-  font-weight: 600;
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .about {
+    padding: 60px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-content {
+    margin-left: 0;        /* 🔥 เอา 700px ออก */
+    max-width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-img {
+    opacity: 0.3; /* optional ทำให้ตัวหนังสืออ่านง่าย */
+  }
 }
 
-/* button */
-.btn {
-  margin-top: 30px;
-  padding: 16px 40px;
-  border-radius: 40px;
-  background: #e53935;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
 /* CONTACT */
 .contact {
