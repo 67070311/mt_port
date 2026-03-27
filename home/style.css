@@ -41,8 +41,7 @@
 
 /* BUTTON */
 .btn {
-  margin-top: 60px;
-  transform: translateY(300px); /* ดันลงเพิ่ม */
+  margin-top: 80px;
 
   padding: 16px 40px;   /* 🔥 ปุ่มใหญ่ขึ้น */
   font-size: 16px;      /* 🔥 ตัวหนังสือใหญ่ขึ้น */
@@ -172,33 +171,6 @@
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-  .cards-section {
-    padding: 80px 20px;
-  }
-
-  /* ซ่อนรูปซ้าย (กันรกจอ) */
-  .side-img {
-    display: none;
-  }
-
-  /* เรียงการ์ดลง */
-  .cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  /* ปรับขนาด card */
-  .card {
-    width: 90%;
-    max-width: 320px;
-    height: auto;        /* 🔥 สำคัญ */
-    aspect-ratio: 9/16;  /* รักษาสัดส่วน */
-  }
-}
 
 /*---------- SECTION------------ */
 .about {
@@ -247,33 +219,6 @@
   color: #252525;
 }
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-  .about {
-    padding: 60px 20px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .about-content {
-    margin-left: 0;        /* 🔥 เอา 700px ออก */
-    max-width: 100%;
-  }
-
-  .about-content h2 {
-    font-size: 36px;
-  }
-
-  .about-content p {
-    font-size: 14px;
-  }
-
-  .about-img {
-    opacity: 0.3; /* optional ทำให้ตัวหนังสืออ่านง่าย */
-  }
-}
-
 
 /* CONTACT */
 .contact {
@@ -289,4 +234,119 @@
 
 .contact p {
   margin-bottom: 8px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-bg {
+    height: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px; /* 🔥 ลดจาก 80 */
+  }
+
+  .btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  /* MENU */
+  .menu-panel {
+    width: 100%; /* 🔥 เต็มจอ */
+  }
+
+  .menu-panel a {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column; /* 🔥 เรียงลง */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 90%;
+    height: 400px;
+  }
+
+  .side-img {
+    display: none; /* 🔥 เอาออกไม่ให้รก */
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-img {
+    position: relative;
+    height: 300px;
+  }
+
+  .about-content {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-size: 24px;
+  }
+
+  .contact p {
+    font-size: 14px;
+  }
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+  .hero-content h1 {
+    font-size: 55px;
+  }
+
+  .cards {
+    gap: 30px;
+  }
+
+  .card {
+    width: 220px;
+    height: 420px;
+  }
+
+  .about-content {
+    margin-left: 200px;
+  }
 }
